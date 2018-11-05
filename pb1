@@ -1,0 +1,10 @@
+问题描述：(miniui)
+在区域级公共费用分摊页面,由于取其他公共费用值是在汇总行显示值,
+grid.load(json,function(e){
+  var qtggfy = e.text.listQtggfy[0].qtggfy;
+  if(qtggfy=='' || qtggfy == null){
+      qtggfy=0;   
+  }
+  var html = grid.getSummaryCellEl("qtggfy");
+  $(html).html("<span style='display: block;font-weight: bold;text-align: right;'>" + qtggfy + "</span>");
+});
